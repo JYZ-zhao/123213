@@ -115,7 +115,7 @@
 <meta property="og:site_name" content="秋若沐曦">
 <meta property="og:description" content="文中首先解释了加密解密的一些基础知识和概念，然后通过一个加密通信过程的例子说明了加密算法的作用，以及数字证书的出现所起的作用。接着对数字证书做一个详细的解释，并讨论一下windows中数字证书的管理，最后演示使用makecert生成数字证书。如果发现文中有错误的地方，或者有什么地方说得不够清楚，欢迎指出！ 1、基础知识​      这部分内容主要解释一些概念和术语，最好是先理解这部分内容。 1.1">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-19T10:04:41.706Z">
+<meta property="og:updated_time" content="2018-11-19T10:07:21.362Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="对称加密">
 <meta name="twitter:description" content="文中首先解释了加密解密的一些基础知识和概念，然后通过一个加密通信过程的例子说明了加密算法的作用，以及数字证书的出现所起的作用。接着对数字证书做一个详细的解释，并讨论一下windows中数字证书的管理，最后演示使用makecert生成数字证书。如果发现文中有错误的地方，或者有什么地方说得不够清楚，欢迎指出！ 1、基础知识​      这部分内容主要解释一些概念和术语，最好是先理解这部分内容。 1.1">
@@ -405,7 +405,7 @@
                 
               
 
-              <time title="创建时间：2018-11-19 17:45:34 / 修改时间：18:04:41" itemprop="dateCreated datePublished" datetime="2018-11-19T17:45:34+08:00">2018-11-19</time>
+              <time title="创建时间：2018-11-19 17:45:34 / 修改时间：18:07:21" itemprop="dateCreated datePublished" datetime="2018-11-19T17:45:34+08:00">2018-11-19</time>
             
 
             
@@ -465,6 +465,7 @@
 <h1 id="1、基础知识"><a href="#1、基础知识" class="headerlink" title="1、基础知识"></a>1、基础知识</h1><p>​      这部分内容主要解释一些概念和术语，最好是先理解这部分内容。</p>
 <h2 id="1-1、公钥密码体制-public-key-cryptography"><a href="#1-1、公钥密码体制-public-key-cryptography" class="headerlink" title="1.1、公钥密码体制(public-key cryptography)"></a>1.1、公钥密码体制(public-key cryptography)</h2><p>公钥密码体制分为三个部分，公钥、私钥、加密解密算法，它的加密解密过程如下：</p>
 <p>加密：通过加密算法和公钥对内容(或者说明文)进行加密，得到密文。加密过程需要用到公钥。<br>解密：通过解密算法和私钥对密文进行解密，得到明文。解密过程需要用到解密算法和私钥。注意，由公钥加密的内容，只能由私钥进行解密，也就是说，由公钥加密的内容，如果不知道私钥，是无法解密的。<br>公钥密码体制的公钥和算法都是公开的(这是为什么叫公钥密码体制的原因)，私钥是保密的。大家都以使用公钥进行加密，但是只有私钥的持有者才能解密。在实际的使用中，有需要的人会生成一对公钥和私钥，把公钥发布出去给别人使用，自己保留私钥。</p>
+<a id="more"></a>
 <h2 id="1-2、对称加密算法-symmetric-key-algorithms"><a href="#1-2、对称加密算法-symmetric-key-algorithms" class="headerlink" title="1.2、对称加密算法(symmetric key algorithms)"></a>1.2、对称加密算法(symmetric key algorithms)</h2><p>在对称加密算法中，加密使用的密钥和解密使用的密钥是相同的。也就是说，加密和解密都是使用的同一个密钥。因此对称加密算法要保证安全性的话，密钥要做好保密，只能让使用的人知道，不能对外公开。这个和上面的公钥密码体制有所不同，公钥密码体制中加密是用公钥，解密使用私钥，而对称加密算法中，加密和解密都是使用同一个密钥，不区分公钥和私钥。</p>
 <p>// 密钥，一般就是一个字符串或数字，在加密或者解密时传递给加密/解密算法。前面在公钥密码体制中说到的公钥、私钥就是密钥，公钥是加密使用的密钥，私钥是解密使用的密钥。</p>
 <h2 id="1-3、非对称加密算法-asymmetric-key-algorithms"><a href="#1-3、非对称加密算法-asymmetric-key-algorithms" class="headerlink" title="1.3、非对称加密算法(asymmetric key algorithms)"></a>1.3、非对称加密算法(asymmetric key algorithms)</h2><p>在非对称加密算法中，加密使用的密钥和解密使用的密钥是不相同的。前面所说的公钥密码体制就是一种非对称加密算法，他的公钥和是私钥是不能相同的，也就是说加密使用的密钥和解密使用的密钥不同，因此它是一个非对称加密算法。</p>
