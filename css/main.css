@@ -1766,7 +1766,15 @@ pre .javascript .function {
   max-width: 120px;
   height: auto;
   border: 1px solid #eee;
-  opacity: 1;
+  border-radius: 60%;
+  transition: 2.5s all;
+}
+.site-author-image:hover {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
 }
 .site-author-name {
   margin: 0;
@@ -1850,7 +1858,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #947945;
+  background: #d579eb;
 }
 .links-of-blogroll {
   font-size: 13px;
