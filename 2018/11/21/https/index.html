@@ -116,13 +116,12 @@
 <meta property="og:site_name" content="秋若沐曦">
 <meta property="og:description" content="对称加密和非对称加密这也是理解https的重要基础之一。这里涉及到很多复杂的算法，我并不精通算法和密码学，所以这里不讲的太细。你们只要知道个大概即可：对称加密：加密和解密都用一个密钥，有点是速度快。缺点吗，显而易见的是 双方要用这个通信的话 必须得把密钥告知对方，但是这个密钥一旦被截获了，就可以随便decode出来明文。实际上不够安全。非对称加密：有一对密钥，即有公钥也有私钥。公钥随便发，私钥不会">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/2018/11/21/https/https%20/https1.jpg">
-<meta property="og:image" content="http://yoursite.com/2018/11/21/https/image%20/https1.jpg">
-<meta property="og:updated_time" content="2018-11-22T12:07:28.473Z">
+<meta property="og:image" content="http://yoursite.com/2018/11/21/https/112101.jpg">
+<meta property="og:updated_time" content="2018-11-22T12:47:07.744Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="https">
 <meta name="twitter:description" content="对称加密和非对称加密这也是理解https的重要基础之一。这里涉及到很多复杂的算法，我并不精通算法和密码学，所以这里不讲的太细。你们只要知道个大概即可：对称加密：加密和解密都用一个密钥，有点是速度快。缺点吗，显而易见的是 双方要用这个通信的话 必须得把密钥告知对方，但是这个密钥一旦被截获了，就可以随便decode出来明文。实际上不够安全。非对称加密：有一对密钥，即有公钥也有私钥。公钥随便发，私钥不会">
-<meta name="twitter:image" content="http://yoursite.com/2018/11/21/https/https%20/https1.jpg">
+<meta name="twitter:image" content="http://yoursite.com/2018/11/21/https/112101.jpg">
 
 
 
@@ -425,7 +424,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-11-22 20:07:28" itemprop="dateModified" datetime="2018-11-22T20:07:28+08:00">2018-11-22</time>
+                <time title="修改时间：2018-11-22 20:47:07" itemprop="dateModified" datetime="2018-11-22T20:47:07+08:00">2018-11-22</time>
               
             
           </span>
@@ -489,7 +488,8 @@
 <h2 id="C-数据内容的完整性"><a href="#C-数据内容的完整性" class="headerlink" title="C.数据内容的完整性"></a>C.数据内容的完整性</h2><p>这个也不是很容易理解，按道理说TCP是能保证数据有序完整的到达对方的。但是不要忘记中间我们经过的无数次路由器转发，<br>可能被劫持，被劫持以后可能会对数据包进行篡改，这个时候我们需要一种机制保护我们的数据不被篡改，即使被篡改<br>也能被我们察觉，确保我对我老婆写的信能完整的让我老婆看到，而不是只看到一半。</p>
 <h1 id="https的设计思路"><a href="#https的设计思路" class="headerlink" title="https的设计思路"></a>https的设计思路</h1><p>根据前面我们阐述的加密算法和安全通信三原则，为了保证我们的通信能够安全进行，可以试想出一种流程来保证通信安全：</p>
 <p>服务器为每个客户端生成一个公钥，将公钥发送给客户端<br>客户端选择一个加密算法，然后用公钥加密以后发送给服务器<br>服务器收到这个公钥加密后的算法以后拿自己的私钥解密，然后就知道这个加密算法是哪个了。今后就一直用这个算法通信。</p>
-<p>目前来看，这个思路是不是很完美。公钥即使被中间人截获以后也没用，因为拿到公钥也解密不出来到底双方是用哪种算法加密的。<br>但有个重大缺陷：<br>中间人可以将服务器发送的公钥包进行掉包，客户端怎么知道这个公钥是真的服务器发送的还是假的中间人给的非法公钥呢？<br>可以看这张图，基本上中间人攻击就是这个图所示的意思。<br><img src="https /https1.jpg" alt=""><br><img src="image /https1.jpg" alt=""></p>
+<p>目前来看，这个思路是不是很完美。公钥即使被中间人截获以后也没用，因为拿到公钥也解密不出来到底双方是用哪种算法加密的。<br>但有个重大缺陷：<br>中间人可以将服务器发送的公钥包进行掉包，客户端怎么知道这个公钥是真的服务器发送的还是假的中间人给的非法公钥呢？<br>可以看这张图，基本上中间人攻击就是这个图所示的意思。</p>
+<p><img src="/2018/11/21/https/112101.jpg" alt=""></p>
 <h1 id="解决中间人攻击问题"><a href="#解决中间人攻击问题" class="headerlink" title="解决中间人攻击问题"></a>解决中间人攻击问题</h1><p>这个问题的解决办法其实也很粗暴：</p>
 <p>使用权威的第三方机构也就是CA向安全的服务器颁发证书。来证明这台服务器的合法性。<br>服务器通过这个证书来把自己的公钥加密以后发给客户端<br>客户端收到这个加密后的公钥以后 ，就用第三方机构的公钥 把这个服务器返回的加密后的公钥 解密 从而得到真正的服务器<br>的公钥</p>
 <p>带来的问题：<br>客户端到哪去取第三方公钥?</p>
