@@ -20,7 +20,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
-
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 
 
 
@@ -174,7 +175,6 @@
 </noscript>
 
 </head>
-
 <body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
@@ -464,8 +464,8 @@
 
       
         
-          <p>经常会听到持续集成，持续交付，持续部署，三者究竟是什么，有何联系和区别呢？<br><img src="/2018/11/22/cicd/0.png" alt=""><br>假如把开发工作流程分为以下几个阶段：<br>编码 -&gt; 构建 -&gt; 集成 -&gt; 测试 -&gt; 交付 -&gt; 部署<br>正如你在上图中看到，「持续集成（Continuous Integration）」、「持续交付（Continuous Delivery）」和「持续部署（Continuous Deployment）」有着不同的软件自动化交付周期。</p>
-<h1 id="持续集成"><a href="#持续集成" class="headerlink" title="持续集成"></a>持续集成</h1><p>持续集成是指软件个人研发的部分向软件整体部分交付，频繁进行集成以便更快地发现其中的错误。“持续集成”源自于极限编程（XP），是 XP 最初的 12 种实践之一。<br><img src="/2018/11/22/cicd/1.png" alt=""></p>
+          <p>经常会听到持续集成，持续交付，持续部署，三者究竟是什么，有何联系和区别呢？<br><img src="image /0.png" alt=""><br>假如把开发工作流程分为以下几个阶段：<br>编码 -&gt; 构建 -&gt; 集成 -&gt; 测试 -&gt; 交付 -&gt; 部署<br>正如你在上图中看到，「持续集成（Continuous Integration）」、「持续交付（Continuous Delivery）」和「持续部署（Continuous Deployment）」有着不同的软件自动化交付周期。</p>
+<h1 id="持续集成"><a href="#持续集成" class="headerlink" title="持续集成"></a>持续集成</h1><p>持续集成是指软件个人研发的部分向软件整体部分交付，频繁进行集成以便更快地发现其中的错误。“持续集成”源自于极限编程（XP），是 XP 最初的 12 种实践之一。<br><img src="image /1.png" alt=""></p>
 <h2 id="CI-需要具备这些："><a href="#CI-需要具备这些：" class="headerlink" title="CI 需要具备这些："></a>CI 需要具备这些：</h2><ul>
 <li><p>全面的自动化测试。这是实践持续集成&amp;持续部署的基础，同时，选择合适的自动化测试工具也极其重要；</p>
 </li>
@@ -500,7 +500,7 @@
 </li>
 </ul>
 <p>整体而言，Jenkins 过去一直是大部分公司的选择，但这个现象正在发生改变，随着公有云服务、Docker，SaaS 的普及，越来越多的企业开始选择 Hosted CI，也就是托管型持续集成系统。<br>另外，在选择合适的持续集成服务时，还需要考量系统的灵活度以适应公司不同阶段的开发测试需求。<br>选择持续集成系统只是持续集成应用的其中一步，还需要建立合适的持续集成文化比如代码质量管控、测试文化等。做好持续集成，可为持续交付与持续部署打好坚实基础。</p>
-<h1 id="持续交付"><a href="#持续交付" class="headerlink" title="持续交付"></a>持续交付</h1><p>持续交付在持续集成的基础上，将集成后的代码部署到更贴近真实运行环境的「类生产环境」（production-like environments）中。持续交付优先于整个产品生命周期的软件部署，建立在高水平自动化持续集成之上。<br><img src="/2018/11/22/cicd/2.png" alt=""><br></p>
+<h1 id="持续交付"><a href="#持续交付" class="headerlink" title="持续交付"></a>持续交付</h1><p>持续交付在持续集成的基础上，将集成后的代码部署到更贴近真实运行环境的「类生产环境」（production-like environments）中。持续交付优先于整个产品生命周期的软件部署，建立在高水平自动化持续集成之上。<br><img src="image /2.png" alt=""><br>
           <!--noindex-->
           
             <div class="post-button text-center">
@@ -512,7 +512,7 @@
           <!--/noindex-->
         
       
-    </div>
+    </p></div>
 
     
 
@@ -626,7 +626,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-11-22 10:45:44" itemprop="dateModified" datetime="2018-11-22T10:45:44+08:00">2018-11-22</time>
+                <time title="修改时间：2018-11-22 20:07:28" itemprop="dateModified" datetime="2018-11-22T20:07:28+08:00">2018-11-22</time>
               
             
           </span>
@@ -678,7 +678,7 @@
 
       
         
-          <h1 id="对称加密和非对称加密"><a href="#对称加密和非对称加密" class="headerlink" title="对称加密和非对称加密"></a>对称加密和非对称加密</h1><p>这也是理解https的重要基础之一。这里涉及到很多复杂的算法，我并不精通算法和密码学，所以这里不讲的太细。你们只要知道个大概即可：<br>对称加密：加密和解密都用一个密钥，有点是速度快。缺点吗，显而易见的是 双方要用这个通信的话 必须得把密钥告知对方，<br>但是这个密钥一旦被截获了，就可以随便decode出来明文。实际上不够安全。<br>非对称加密：有一对密钥，即有公钥也有私钥。公钥随便发，私钥不会发出去 各自保管。用一个加密的话，解密就只能用另外一个。比如你向银行请求一个公钥，银行把公钥发给你，你用公钥加密一条信息以后<br>再发给银行，然后银行用私钥解密信息。这个过程就算有人拿到公钥，但是因为非对称加密用一个加密 只能用另外一个解密，所以<br>拿到这公钥也没用，因为无法使用公钥解密，能解密的私钥还在银行那里，银行当然不会传出去，所以非对称加密很安全。<br>但是这种非对称加密非常消耗资源，速度极慢，所以要有限使用。不能无节制使用。<br>HASH加密算法：这个就好像MD5这样的加密方式，是不可逆的。<br></p>
+          <h1 id="对称加密和非对称加密"><a href="#对称加密和非对称加密" class="headerlink" title="对称加密和非对称加密"></a>对称加密和非对称加密</h1><p>这也是理解https的重要基础之一。这里涉及到很多复杂的算法，我并不精通算法和密码学，所以这里不讲的太细。你们只要知道个大概即可：<br>对称加密：加密和解密都用一个密钥，有点是速度快。缺点吗，显而易见的是 双方要用这个通信的话 必须得把密钥告知对方，<br>但是这个密钥一旦被截获了，就可以随便decode出来明文。实际上不够安全。<br>非对称加密：有一对密钥，即有公钥也有私钥。公钥随便发，私钥不会发出去 各自保管。用一个加密的话，解密就只能用另外一个。比如你向银行请求一个公钥，银行把公钥发给你，你用公钥加密一条信息以后<br>再发给银行，然后银行用私钥解密信息。这个过程就算有人拿到公钥，但是因为非对称加密用一个加密 只能用另外一个解密，所以<br>拿到这公钥也没用，因为无法使用公钥解密，能解密的私钥还在银行那里，银行当然不会传出去，所以非对称加密很安全。<br>但是这种非对称加密非常消耗资源，速度极慢，所以要有限使用。不能无节制使用。<br>HASH加密算法：这个就好像MD5这样的加密方式，是不可逆的。<br>
           <!--noindex-->
           
             <div class="post-button text-center">
@@ -690,7 +690,7 @@
           <!--/noindex-->
         
       
-    </div>
+    </p></div>
 
     
 
@@ -1145,7 +1145,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-11-19 16:22:10" itemprop="dateModified" datetime="2018-11-19T16:22:10+08:00">2018-11-19</time>
+                <time title="修改时间：2018-11-22 20:05:51" itemprop="dateModified" datetime="2018-11-22T20:05:51+08:00">2018-11-22</time>
               
             
           </span>
@@ -1198,7 +1198,7 @@
       
         
           
-            <p><img src="/2018/11/15/image/1.jpg" alt=""></p>
+            <p><img src="image / image1.jpg" alt=""></p>
 
           
         
@@ -2061,5 +2061,6 @@
 <script type="text/javascript" color="255,105,180" opacity="1" zindex="-2" count="219" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
 
 <script type="text/javascript" src="/js/src/clicklove.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":true,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":75,"height":150},"mobile":{"show":true},"log":false});</script>
 </body>
 </html>
