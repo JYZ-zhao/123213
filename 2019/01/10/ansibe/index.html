@@ -108,18 +108,18 @@
 
 
 
-  <meta name="description" content="基于python的一个自动化运维工具ansible是什么Ansible 简单的说是一个配置管理系统(configuration management system)。你只需要可以使用 ssh 访问你的服务器或设备就行。它也不同于其他工具，因为它使用推送的方式，而不是像 puppet 等 那样使用拉取安装agent的方式。你可以将代码部署到任意数量的服务器上! ansible能做什么ansible可">
+  <meta name="description" content="基于python的一个自动化运维工具ansible是什么Ansible 简单的说是一个配置管理系统(configuration management system)。你只需要可以使用 ssh 访问你的服务器或设备就行。它也不同于其他工具，因为它使用推送的方式，而不是像 puppet 等 那样使用拉取安装agent的方式。你可以将代码部署到任意数量的服务器上!   ansible能做什么ansibl">
 <meta name="keywords" content="-devops -自动化运维">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ansibe">
 <meta property="og:url" content="http://yoursite.com/2019/01/10/ansibe/index.html">
 <meta property="og:site_name" content="秋若沐曦">
-<meta property="og:description" content="基于python的一个自动化运维工具ansible是什么Ansible 简单的说是一个配置管理系统(configuration management system)。你只需要可以使用 ssh 访问你的服务器或设备就行。它也不同于其他工具，因为它使用推送的方式，而不是像 puppet 等 那样使用拉取安装agent的方式。你可以将代码部署到任意数量的服务器上! ansible能做什么ansible可">
+<meta property="og:description" content="基于python的一个自动化运维工具ansible是什么Ansible 简单的说是一个配置管理系统(configuration management system)。你只需要可以使用 ssh 访问你的服务器或设备就行。它也不同于其他工具，因为它使用推送的方式，而不是像 puppet 等 那样使用拉取安装agent的方式。你可以将代码部署到任意数量的服务器上!   ansible能做什么ansibl">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-10T05:05:46.652Z">
+<meta property="og:updated_time" content="2019-01-10T05:11:21.703Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ansibe">
-<meta name="twitter:description" content="基于python的一个自动化运维工具ansible是什么Ansible 简单的说是一个配置管理系统(configuration management system)。你只需要可以使用 ssh 访问你的服务器或设备就行。它也不同于其他工具，因为它使用推送的方式，而不是像 puppet 等 那样使用拉取安装agent的方式。你可以将代码部署到任意数量的服务器上! ansible能做什么ansible可">
+<meta name="twitter:description" content="基于python的一个自动化运维工具ansible是什么Ansible 简单的说是一个配置管理系统(configuration management system)。你只需要可以使用 ssh 访问你的服务器或设备就行。它也不同于其他工具，因为它使用推送的方式，而不是像 puppet 等 那样使用拉取安装agent的方式。你可以将代码部署到任意数量的服务器上!   ansible能做什么ansibl">
 
 
 
@@ -405,7 +405,7 @@
                 
               
 
-              <time title="创建时间：2019-01-10 12:54:35 / 修改时间：13:05:46" itemprop="dateCreated datePublished" datetime="2019-01-10T12:54:35+08:00">2019-01-10</time>
+              <time title="创建时间：2019-01-10 12:54:35 / 修改时间：13:11:21" itemprop="dateCreated datePublished" datetime="2019-01-10T12:54:35+08:00">2019-01-10</time>
             
 
             
@@ -468,25 +468,10 @@
       
 
       
-        <h2 id="基于python的一个自动化运维工具"><a href="#基于python的一个自动化运维工具" class="headerlink" title="基于python的一个自动化运维工具"></a>基于python的一个自动化运维工具</h2><h2 id="ansible是什么"><a href="#ansible是什么" class="headerlink" title="ansible是什么"></a>ansible是什么</h2><pre><code>Ansible 简单的说是一个配置管理系统(configuration management system)。你只需要可以使用 ssh 访问你的服务器或设备就行。它也不同于其他工具，因为它使用推送的方式，而不是像 puppet 等 那样使用拉取安装agent的方式。你可以将代码部署到任意数量的服务器上!
-</code></pre><h2 id="ansible能做什么"><a href="#ansible能做什么" class="headerlink" title="ansible能做什么"></a>ansible能做什么</h2><pre><code>ansible可以帮助我们完成一些批量任务，或者完成一些需要经常重复的工作。
-比如：同时在100台服务器上安装nginx服务，并在安装后启动它们。
-比如：将某个文件一次性拷贝到100台服务器上。
-比如：每当有新服务器加入工作环境时，你都要为新服务器部署某个服务，也就是说你需要经常重复的完成相同的工作。
-这些场景中我们都可以使用到ansible
-</code></pre><h2 id="ansible特性"><a href="#ansible特性" class="headerlink" title="ansible特性"></a>ansible特性</h2><pre><code>模块化：调用特定的模块，完成特定任务
-. 有Paramiko，PyYAML，Jinja2（模板语言）三个关键模块
-. 支持自定义模块
-. 基于Python语言实现
-. 部署简单，基于python和SSH(默认已安装)，agentless
-. 安全，基于OpenSSH
-. 支持playbook编排任务
-. 幂等性：一个任务执行1遍和执行n遍效果一样，不因重复执行带来意外情况
-. 无需代理不依赖PKI（无需ssl）
-. 可使用任何编程语言写模块
-. YAML格式，编排任务，支持丰富的数据结构
-. 较强大的多层解决方案
-</code></pre>
+        <h2 id="基于python的一个自动化运维工具"><a href="#基于python的一个自动化运维工具" class="headerlink" title="基于python的一个自动化运维工具"></a>基于python的一个自动化运维工具</h2><h2 id="ansible是什么"><a href="#ansible是什么" class="headerlink" title="ansible是什么"></a>ansible是什么</h2><p>Ansible 简单的说是一个配置管理系统(configuration management system)。你只需要可以使用 ssh 访问你的服务器或设备就行。它也不同于其他工具，因为它使用推送的方式，而不是像 puppet 等 那样使用拉取安装agent的方式。你可以将代码部署到任意数量的服务器上!  </p>
+<h2 id="ansible能做什么"><a href="#ansible能做什么" class="headerlink" title="ansible能做什么"></a>ansible能做什么</h2><p>ansible可以帮助我们完成一些批量任务，或者完成一些需要经常重复的工作。<br>比如：同时在100台服务器上安装nginx服务，并在安装后启动它们。<br>比如：将某个文件一次性拷贝到100台服务器上。<br>比如：每当有新服务器加入工作环境时，你都要为新服务器部署某个服务，也就是说你需要经常重复的完成相同的工作。<br>这些场景中我们都可以使用到ansible</p>
+<h2 id="ansible特性"><a href="#ansible特性" class="headerlink" title="ansible特性"></a>ansible特性</h2><p>. 模块化：调用特定的模块，完成特定任务<br>. 有Paramiko，PyYAML，Jinja2（模板语言）三个关键模块<br>. 支持自定义模块<br>. 基于Python语言实现<br>. 部署简单，基于python和SSH(默认已安装)，agentless<br>. 安全，基于OpenSSH<br>. 支持playbook编排任务<br>. 幂等性：一个任务执行1遍和执行n遍效果一样，不因重复执行带来意外情况<br>. 无需代理不依赖PKI（无需ssl）<br>. 可使用任何编程语言写模块<br>. YAML格式，编排任务，支持丰富的数据结构<br>. 较强大的多层解决方案</p>
+
       
     </div>
 

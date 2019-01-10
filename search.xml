@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[ansibe]]></title>
     <url>%2F2019%2F01%2F10%2Fansibe%2F</url>
-    <content type="text"><![CDATA[基于python的一个自动化运维工具ansible是什么Ansible 简单的说是一个配置管理系统(configuration management system)。你只需要可以使用 ssh 访问你的服务器或设备就行。它也不同于其他工具，因为它使用推送的方式，而不是像 puppet 等 那样使用拉取安装agent的方式。你可以将代码部署到任意数量的服务器上! ansible能做什么ansible可以帮助我们完成一些批量任务，或者完成一些需要经常重复的工作。 比如：同时在100台服务器上安装nginx服务，并在安装后启动它们。 比如：将某个文件一次性拷贝到100台服务器上。 比如：每当有新服务器加入工作环境时，你都要为新服务器部署某个服务，也就是说你需要经常重复的完成相同的工作。 这些场景中我们都可以使用到ansible ansible特性模块化：调用特定的模块，完成特定任务 . 有Paramiko，PyYAML，Jinja2（模板语言）三个关键模块 . 支持自定义模块 . 基于Python语言实现 . 部署简单，基于python和SSH(默认已安装)，agentless . 安全，基于OpenSSH . 支持playbook编排任务 . 幂等性：一个任务执行1遍和执行n遍效果一样，不因重复执行带来意外情况 . 无需代理不依赖PKI（无需ssl） . 可使用任何编程语言写模块 . YAML格式，编排任务，支持丰富的数据结构 . 较强大的多层解决方案]]></content>
+    <content type="text"><![CDATA[基于python的一个自动化运维工具ansible是什么Ansible 简单的说是一个配置管理系统(configuration management system)。你只需要可以使用 ssh 访问你的服务器或设备就行。它也不同于其他工具，因为它使用推送的方式，而不是像 puppet 等 那样使用拉取安装agent的方式。你可以将代码部署到任意数量的服务器上! ansible能做什么ansible可以帮助我们完成一些批量任务，或者完成一些需要经常重复的工作。比如：同时在100台服务器上安装nginx服务，并在安装后启动它们。比如：将某个文件一次性拷贝到100台服务器上。比如：每当有新服务器加入工作环境时，你都要为新服务器部署某个服务，也就是说你需要经常重复的完成相同的工作。这些场景中我们都可以使用到ansible ansible特性. 模块化：调用特定的模块，完成特定任务. 有Paramiko，PyYAML，Jinja2（模板语言）三个关键模块. 支持自定义模块. 基于Python语言实现. 部署简单，基于python和SSH(默认已安装)，agentless. 安全，基于OpenSSH. 支持playbook编排任务. 幂等性：一个任务执行1遍和执行n遍效果一样，不因重复执行带来意外情况. 无需代理不依赖PKI（无需ssl）. 可使用任何编程语言写模块. YAML格式，编排任务，支持丰富的数据结构. 较强大的多层解决方案]]></content>
       <categories>
         <category>学习笔记</category>
       </categories>
