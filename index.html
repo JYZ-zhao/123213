@@ -362,7 +362,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/25/ansibe/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/10/ansibe/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZY">
@@ -382,7 +382,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2018/12/25/ansibe/" class="post-title-link" itemprop="http://yoursite.com/index.html">ansibe</a>
+                <a href="/2019/01/10/ansibe/" class="post-title-link" itemprop="http://yoursite.com/index.html">ansibe</a>
               
             
           </h1>
@@ -407,7 +407,7 @@
                 
               
 
-              <time title="创建时间：2018-12-25 19:43:40 / 修改时间：19:44:34" itemprop="dateCreated datePublished" datetime="2018-12-25T19:43:40+08:00">2018-12-25</time>
+              <time title="创建时间：2019-01-10 12:54:35 / 修改时间：13:05:46" itemprop="dateCreated datePublished" datetime="2019-01-10T12:54:35+08:00">2019-01-10</time>
             
 
             
@@ -465,7 +465,25 @@
       
         
           
-            
+            <h2 id="基于python的一个自动化运维工具"><a href="#基于python的一个自动化运维工具" class="headerlink" title="基于python的一个自动化运维工具"></a>基于python的一个自动化运维工具</h2><h2 id="ansible是什么"><a href="#ansible是什么" class="headerlink" title="ansible是什么"></a>ansible是什么</h2><pre><code>Ansible 简单的说是一个配置管理系统(configuration management system)。你只需要可以使用 ssh 访问你的服务器或设备就行。它也不同于其他工具，因为它使用推送的方式，而不是像 puppet 等 那样使用拉取安装agent的方式。你可以将代码部署到任意数量的服务器上!
+</code></pre><h2 id="ansible能做什么"><a href="#ansible能做什么" class="headerlink" title="ansible能做什么"></a>ansible能做什么</h2><pre><code>ansible可以帮助我们完成一些批量任务，或者完成一些需要经常重复的工作。
+比如：同时在100台服务器上安装nginx服务，并在安装后启动它们。
+比如：将某个文件一次性拷贝到100台服务器上。
+比如：每当有新服务器加入工作环境时，你都要为新服务器部署某个服务，也就是说你需要经常重复的完成相同的工作。
+这些场景中我们都可以使用到ansible
+</code></pre><h2 id="ansible特性"><a href="#ansible特性" class="headerlink" title="ansible特性"></a>ansible特性</h2><pre><code>模块化：调用特定的模块，完成特定任务
+. 有Paramiko，PyYAML，Jinja2（模板语言）三个关键模块
+. 支持自定义模块
+. 基于Python语言实现
+. 部署简单，基于python和SSH(默认已安装)，agentless
+. 安全，基于OpenSSH
+. 支持playbook编排任务
+. 幂等性：一个任务执行1遍和执行n遍效果一样，不因重复执行带来意外情况
+. 无需代理不依赖PKI（无需ssl）
+. 可使用任何编程语言写模块
+. YAML格式，编排任务，支持丰富的数据结构
+. 较强大的多层解决方案
+</code></pre>
           
         
       
@@ -1705,7 +1723,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-"></i>
   </span>
